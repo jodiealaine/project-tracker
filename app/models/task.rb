@@ -19,7 +19,7 @@ class Task
 		completed_at > 3.weeks.ago
 	end
 
-	def points_towards_velocity
+	def points_toward_velocity
 		if part_of_velocity? then size else 0 end
 	end
 end
