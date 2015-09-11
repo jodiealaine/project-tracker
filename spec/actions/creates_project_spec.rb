@@ -39,6 +39,7 @@ describe CreatesProject do
 			specify { expect(tasks.map(&:title)).to eq(["about things", "another things"]) }
 			specify { expect(tasks.map(&:size)).to eq([3, 2]) }
 		end
+		
 		describe "attaches tasks to the project" do
 			let(:task_string) { "about things:3\nanother things:3" }
 			it "saves the project and tasks" do 
