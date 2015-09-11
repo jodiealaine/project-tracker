@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+	
 	has_many :tasks
 	validates :name, presence: true
 
@@ -11,7 +12,7 @@ class Project < ActiveRecord::Base
 	end
 	
 	def done?
-		tasks.reject(&:complete?).empty?
+		incomplete_tasks.empty?
 	end
 
 	def total_size

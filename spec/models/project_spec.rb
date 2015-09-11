@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Project do 
+
 	describe "initialization" do 
+
 		let(:project) { Project.new }
 		let(:task) { Task.new }
 
